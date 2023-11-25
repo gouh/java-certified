@@ -1,3 +1,5 @@
+package excercises;
+
 import java.time.Year;
 
 public class User {
@@ -14,7 +16,7 @@ public class User {
      * This method calculates the user's age based on the current year and the year of birth,
      * and prints the user's name along with their age.
      * Example usage:
-     * User myUser = new User("John", 1990);
+     * excercises.User myUser = new excercises.User("John", 1990);
      * myUser.printUserInfo();
      * This will output:
      * Hi John!, your age is : 31

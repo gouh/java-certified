@@ -1,3 +1,5 @@
+package excercises;
+
 public class Vars {
     byte byteVar;
     short shortVar;
