@@ -13,8 +13,8 @@ Java SDK 11 And a basic understanding of computer programming.
 
 The course consists of several modules that cover different aspects of Java.
 
-* [Data types] (https://github.com/gouh/java-certified/blob/beeafb008cce48864b188b10c5853fa0451c1dc8/src/excercises/Vars.java#L3)
-* [String handling] (https://github.com/gouh/java-certified/blob/beeafb008cce48864b188b10c5853fa0451c1dc8/src/excercises/User.java#L5)
+* [Data types](./src/excercises/Vars.java)
+* [String handling](./src/excercises/User.java)
 
 ## Authors
 
