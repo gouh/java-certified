@@ -1,4 +1,4 @@
-package excercises;
+package excercises.vars.interpolation;
 
 import java.time.Year;
 
@@ -16,7 +16,7 @@ public class User {
      * This method calculates the user's age based on the current year and the year of birth,
      * and prints the user's name along with their age.
      * Example usage:
-     * excercises.User myUser = new excercises.User("John", 1990);
+     * excercises.vars.interpolation.User myUser = new excercises.vars.interpolation.User("John", 1990);
      * myUser.printUserInfo();
      * This will output:
      * Hi John!, your age is : 31

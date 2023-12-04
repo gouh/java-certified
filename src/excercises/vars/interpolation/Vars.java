@@ -1,4 +1,4 @@
-package excercises;
+package excercises.vars.interpolation;
 
 public class Vars {
     byte byteVar;
