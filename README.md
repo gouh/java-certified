@@ -13,8 +13,9 @@ Java SDK 11 And a basic understanding of computer programming.
 
 The course consists of several modules that cover different aspects of Java.
 
-* [Data types](./src/excercises/Vars.java)
-* [String handling](./src/excercises/User.java)
+* [Data types](./src/excercises/conditionals/loops/Main.java)
+* [String handling](./src/excercises/vars/interpolation/Main.java)
+* [inheritance](./src/excercises/inheritance/Main.java)
 
 ## Authors
 
