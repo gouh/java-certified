@@ -4,6 +4,7 @@ import excercises.inheritance.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ProductService {
     private final List<Product> products;
@@ -28,7 +29,14 @@ public class ProductService {
         return this.products;
     }
 
-    public boolean create(Product product) {
+    public boolean create(Product product) throws Exception {
+        boolean existProduct = this.products.stream()
+                .anyMatch(item -> Objects.equals(item.getSerialNumber(), product.getSerialNumber()));
+
+        if (existProduct) {
+            throw new Exception("Serial Number is previously used");
+        }
+
         return this.products.add(product);
     }
 

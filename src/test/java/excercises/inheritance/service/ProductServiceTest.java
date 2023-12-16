@@ -14,7 +14,7 @@ public class ProductServiceTest {
     private Product product2;
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws Exception {
         productService = new ProductService();
         product1 = new Product("12345", "Supplier1", "Origin1", "Red", "SKU1");
         product2 = new Product("67890", "Supplier2", "Origin2", "Blue", "SKU2");
@@ -43,11 +43,18 @@ public class ProductServiceTest {
     }
 
     @Test
-    void create_ShouldAddProduct() {
+    void create_ShouldAddProduct() throws Exception {
         Product product3 = new Product("101112", "Supplier3", "Origin3", "Green", "SKU3");
         assertTrue(productService.create(product3));
         assertEquals(3, productService.getAll().size());
         assertTrue(productService.getAll().contains(product3));
+    }
+
+    @Test
+    void create_ShouldThrowExceptionForRepeatedSerialNumber() {
+        Product product3 = new Product("12345", "Supplier3", "Origin3", "Green", "SKU3");
+        Exception exception = assertThrows(Exception.class, () -> productService.create(product3));
+        assertEquals("Serial Number is previously used", exception.getMessage());
     }
 
     @Test

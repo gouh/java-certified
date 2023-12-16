@@ -79,7 +79,7 @@ public class ProductConsole {
         );
     }
 
-    private void add() {
+    private void add() throws Exception {
         System.out.println("* Registering a new product.");
         Product product = this.readProductData("");
         if (this.productService.create(product)) {
@@ -87,7 +87,6 @@ public class ProductConsole {
         } else {
             System.out.printf("Product %s don't saved. \n", product.getSerialNumber());
         }
-        System.out.println();
     }
 
     private void update() throws Exception {
@@ -101,7 +100,6 @@ public class ProductConsole {
         Product oldProduct = this.productService.update(productIndex, product);
 
         System.out.printf("Product %s updated successfully. \n", oldProduct.getSerialNumber());
-        System.out.println();
     }
 
     private void remove() throws Exception {
@@ -115,8 +113,6 @@ public class ProductConsole {
         } else {
             System.out.printf("Product %s don't removed. \n", serialNumber);
         }
-
-        System.out.println();
     }
 
     private void showList() {
@@ -135,12 +131,14 @@ public class ProductConsole {
     public void showMainPromptMessage() {
         System.out.println("Hi and welcome to catalog of products");
 
+        System.out.println();
         System.out.println("1) Add new product.");
         System.out.println("2) Update product.");
         System.out.println("3) Remove product.");
         System.out.println("4) Show list products.");
         System.out.println("5) Exit.");
 
+        System.out.println();
         System.out.print("Choose an option: ");
         int option = scanner.nextInt();
         scanner.nextLine();
@@ -169,7 +167,8 @@ public class ProductConsole {
                     break;
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println();
+            System.out.println("* ERROR: " + e.getMessage());
         }
 
         System.out.println();
