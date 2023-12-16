@@ -6,9 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductService {
-    /**
-     *
-     */
     private final List<Product> products;
 
     private final String productNotFoundMessage = "Product not found";
@@ -41,8 +38,8 @@ public class ProductService {
 
     public boolean remove(String serialNumber) throws Exception {
         if (this.products.removeIf(product -> product.getSerialNumber().equals(serialNumber))) {
-            throw new Exception(productNotFoundMessage);
+            return true;
         }
-        return true;
+        throw new Exception(productNotFoundMessage);
     }
 }
