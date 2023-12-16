@@ -1,4 +1,4 @@
-package excercises.inheritance;
+package excercises.inheritance.model;
 
 public class Sofa extends Product {
     private final String fabricType;

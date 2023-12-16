@@ -1,4 +1,4 @@
-package excercises.inheritance;
+package excercises.inheritance.model;
 
 public class Dresser extends Product {
     private final int drawerCount;

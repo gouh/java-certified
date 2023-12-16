@@ -1,4 +1,4 @@
-package excercises.inheritance;
+package excercises.inheritance.model;
 
 public class Lamp extends Product {
     private final String lightType;

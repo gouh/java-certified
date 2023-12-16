@@ -1,4 +1,4 @@
-package excercises.inheritance;
+package excercises.inheritance.model;
 
 public class Table extends Product {
     private final String shape;

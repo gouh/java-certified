@@ -1,6 +1,6 @@
-package excercises.inheritance;
+package excercises.inheritance.model;
 
-public class Product {
+public class Product extends Throwable {
     private final String serialNumber;
     private final String supplier;
     private final String origin;
@@ -16,11 +16,18 @@ public class Product {
     }
 
     public void showInformation() {
-        System.out.println("============================================");
+        System.out.println("Product type: " + this.getClass().getSimpleName());
         System.out.println("Serial Number: " + this.serialNumber);
         System.out.println("Supplier: " + this.supplier);
         System.out.println("Origin: " + this.origin);
         System.out.println("Color: " + this.color);
         System.out.println("SKU: " + this.sku);
+    }
+
+    /**
+     * @return serialNumber
+     */
+    public String getSerialNumber() {
+        return this.serialNumber;
     }
 }
